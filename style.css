@@ -10,7 +10,17 @@ GENERAL
 HEADER
 ********/
 
+.navbar-fixed-top {
+	background-color: black;
+	margin: 0;
+}
 
+h1 {
+	text-align: center;
+	text-decoration: underline;
+	padding-top: 100px;
+	margin-top: 0;
+}
 
 
 
@@ -18,7 +28,25 @@ HEADER
 PAGE
 ********/
 
+.player_1, .player_2, .col-md-6 {
+	text-align: center;
+	display: inline-block;
+	border: 2px solid black;
+	width: 300px;
+	margin: 0 auto;
+}
 
+.board {
+	border: 2px solid black;
+	width: 300px;
+	height: 300px;
+	margin: 10px auto;
+}
+
+td {
+	border: 1px solid black;
+	text-align: center;
+}
 
 
 

@@ -4,35 +4,60 @@
 <head>
 	<title>Tic-Tac-Toe | Project</title>
 	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<header>
+		<nav class="navbar-fixed-top">
+			TEST
+		</nav>
 		<h1>The Tic-Tac-Toe Dome</h1>
 	</header>
 
 	<section>
-		<h3 class="player_1">player_1</h3><h3 class="player_2">player_2</h3>
+		<div class="row">
+			<h3 class="player_1 col-md-6">player_1</h3>
+			<h3 class="player_2 col-md-6">player_2</h3>
+		</div>
 		<form>
-			<table>
+			<table class="board">
 				<tr>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
+					<td>
+						<button class="button_1">1</button>
+					</td>
+					<td>
+						<button class="button_2">2</button>
+					</td>
+					<td>
+						<button class="button_3">3</button>
+					</td>
 				</tr>
 				<tr>
-					<td>4</td>
-					<td>5</td>
-					<td>6</td>
+					<td>
+						<button class="button_4">1</button>
+					</td>
+					<td>
+						<button class="button_5">2</button>
+					</td>
+					<td>
+						<button class="button_6">3</button>
+					</td>
 				</tr>
 				<tr>
-					<td>7</td>
-					<td>8</td>
-					<td>9</td>
+					<td>
+						<button class="button_7">1</button>
+					</td>
+					<td>
+						<button class="button_8">2</button>
+					</td>
+					<td>
+						<button class="button_9">3</button>
+					</td>
 				</tr>
 			</table>	
 		</form>
-		<button>New Game</button>
+		<button class="new_game">New Game</button>
 	</section>
 
 	<footer>
