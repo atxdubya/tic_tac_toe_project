@@ -5,7 +5,7 @@ GENERAL
 body {
 	background-image: url(stadium.jpg);
 	background-size: cover;
-
+	padding-top: 42px;
 }
 
 /********
@@ -40,13 +40,8 @@ PAGE
 /*Get player_1 & player_2 to be on either side of the table*/
 .player_1, .player_2, .results_1, .results_2 {
 	border: 2px solid white;
-	width: 200px;
 	color: white;
 	background-color: black; /* #3B653D chalkboard green */
-}
-
-.player_2, .results_2 {
-	float: right;
 }
 
 .board {
@@ -54,6 +49,7 @@ PAGE
 	width: 300px;
 	height: 300px;
 	background-color: white;
+	margin: 0 auto;
 }
 
 td {
