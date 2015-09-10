@@ -1,11 +1,11 @@
 
 // Player 1 and 2 enter their name and it shows up on their respective sides...CHECK
-// $(".player_1").html(prompt("Player 1, please enter your name."));
-// $(".player_2").html(prompt("Player 2, please enter your name."));
+$(".player_1").html(prompt("Player 1, please enter your name."));
+$(".player_2").html(prompt("Player 2, please enter your name."));
 
 
-// Auto assign X with Player 1 and O with Player 2
-	// Need to figure out how to assign an X or O to the player's respective clicks/moves
+// Auto assign X with Player 1 and O with Player 2...CHECK
+	// Need to figure out how to assign an X or O to the player's respective clicks/moves...CHECK
 // Listen for the "click" and place and X wherever they click...CHECK
 	// Switch between turns... CHECK
 	// Leave marker in the respective box... CHECK
