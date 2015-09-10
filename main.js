@@ -53,7 +53,8 @@ $(".square").on("click", function() {
 		((buttonObj.b0 === "X") && (buttonObj.b4 === "X") && (buttonObj.b8 === "X")) ||
 		((buttonObj.b2 === "X") && (buttonObj.b4 === "X") && (buttonObj.b6 === "X"))) {
 		alert(player1 + " wins!!!");
-		// $(".results_1").append("<li>X Wins</li>");
+		$(".results_1").html("Win");
+		$(".results_2").html("Loss");
 		}
 
 
@@ -66,7 +67,8 @@ $(".square").on("click", function() {
 		((buttonObj.b0 === "O") && (buttonObj.b4 === "O") && (buttonObj.b8 === "O")) ||
 		((buttonObj.b2 === "O") && (buttonObj.b4 === "O") && (buttonObj.b6 === "O"))) {
 		alert(player2 + " wins!!!");
-		// $(".results_2").append("<li>O Wins</li>");
+		$(".results_2").html("Win");
+		$(".results_1").html("Loss");
 		}
 })
 
