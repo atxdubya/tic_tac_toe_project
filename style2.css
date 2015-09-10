@@ -1,0 +1,89 @@
+/*******
+GENERAL
+********/
+
+body {
+	background-image: url(stadium.jpg);
+	background-size: cover;
+	padding-top: 42px;
+}
+
+/********
+HEADER
+********/
+
+.navbar-fixed-top {
+	background-color: black;
+	margin: 0;
+	height: 75px;
+	text-align: center;
+}
+
+h1 {
+	color: #888;
+}
+
+h2 {
+	text-align: center;
+	text-decoration: underline;
+	padding-top: 100px;
+	margin-top: 0;
+	color: white;
+}
+
+
+
+/********
+PAGE
+********/
+
+/*Get player_1 & player_2 to be on either side of the table*/
+.player_1, .player_2, .results_1, .results_2 {
+	border: 2px solid white;
+	color: white;
+	background-color: black; /* #3B653D chalkboard green */
+}
+
+.results_1, .results_2 {
+	height: 290px;
+	max-height: 290px;
+	width: 242.5px;
+	max-width: 242.5px;
+}
+
+.board {
+	border: 2px solid black;
+	width: 300px;
+	height: 300px;
+	background-color: white;
+	margin: 0 auto;
+}
+
+td {
+	border: 1px solid black;
+	text-align: center;
+}
+
+.square {
+	width: 100%;
+	height: 100%;
+	font-size: 48px;
+}
+
+/*Get new_game button to be centered*/
+.button-ctr {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.new_game {
+	width: 80px;
+	height: 22px;
+	font-size: 12px;
+	background-color: #e50000;
+	color: white;
+}
+
+/********
+FOOTER
+*******

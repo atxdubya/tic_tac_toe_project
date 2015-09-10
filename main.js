@@ -1,7 +1,9 @@
 
 // Player 1 and 2 enter their name and it shows up on their respective sides...CHECK
-$(".player_1").html(prompt("Player 1, please enter your name."));
-$(".player_2").html(prompt("Player 2, please enter your name."));
+var player1 = prompt("Player 1, please enter your name.");
+var player2 = prompt("Player 2, please enter your name.");
+$(".player_1").html(player1);
+$(".player_2").html(player2);
 
 
 // Track the moves in JS...CHECK
@@ -20,23 +22,24 @@ var playerTurn = 1;
 
 $(".square").on("click", function() {
 	var buttonVal = $(this).attr('id');
+	var buttonStop = ("#" + buttonVal);
+
+	if($(this).hasClass("deny")) {
+		return;
+	}
 
 	if(playerTurn === 1) {
 		$(this).text("X");
+		$(this).addClass("deny");
 		buttonObj[buttonVal] = "X";
 		playerTurn = 2;
-		// if($(this).val() === "X" || $(this).val() === "O") {
-		// 	return;
-		// }...NOT WORKING!
 	}
 
 	else if(playerTurn === 2) {
 		$(this).text("O");
+		$(this).addClass("deny");
 		buttonObj[buttonVal] = "O";
 		playerTurn = 1;
-		// if($(this).val() === "X" || $(this).val() === "O") {
-		// 	return;
-		// }...NOT WORKING!
 	}
 
 	// Recognize when there are 3 of either marker in a rowa
@@ -49,8 +52,10 @@ $(".square").on("click", function() {
 		((buttonObj.b2 === "X") && (buttonObj.b5 === "X") && (buttonObj.b8 === "X")) ||
 		((buttonObj.b0 === "X") && (buttonObj.b4 === "X") && (buttonObj.b8 === "X")) ||
 		((buttonObj.b2 === "X") && (buttonObj.b4 === "X") && (buttonObj.b6 === "X"))) {
-		alert("X wins!!!");
+		alert(player1 + " wins!!!");
+		// $(".results_1").append("<li>X Wins</li>");
 		}
+
 
 	if (((buttonObj.b0 === "O") && (buttonObj.b1 === "O") && (buttonObj.b2 === "O")) ||
 		((buttonObj.b3 === "O") && (buttonObj.b4 === "O") && (buttonObj.b5 === "O")) ||
@@ -60,7 +65,8 @@ $(".square").on("click", function() {
 		((buttonObj.b2 === "O") && (buttonObj.b5 === "O") && (buttonObj.b8 === "O")) ||
 		((buttonObj.b0 === "O") && (buttonObj.b4 === "O") && (buttonObj.b8 === "O")) ||
 		((buttonObj.b2 === "O") && (buttonObj.b4 === "O") && (buttonObj.b6 === "O"))) {
-		alert("O wins!!!");
+		alert(player2 + " wins!!!");
+		// $(".results_2").append("<li>O Wins</li>");
 		}
 })
 
