@@ -1,8 +1,6 @@
-/********
+/*******
 GENERAL
 ********/
-
-
 
 
 
@@ -13,9 +11,15 @@ HEADER
 .navbar-fixed-top {
 	background-color: black;
 	margin: 0;
+	height: 75px;
+	text-align: center;
 }
 
 h1 {
+	color: #888;
+}
+
+h2 {
 	text-align: center;
 	text-decoration: underline;
 	padding-top: 100px;
@@ -28,12 +32,14 @@ h1 {
 PAGE
 ********/
 
-.player_1, .player_2, .col-md-6 {
-	text-align: center;
-	display: inline-block;
+/*Get player_1 & player_2 to be on either side of the table*/
+.player_1, .player_2 {
 	border: 2px solid black;
-	width: 300px;
-	margin: 0 auto;
+	width: 200px;
+}
+
+.player_2 {
+	float: right;
 }
 
 .board {
@@ -48,8 +54,20 @@ td {
 	text-align: center;
 }
 
+/*Get new_game button to be centered*/
+.button-ctr {
+	text-align: center;
+	padding-top: 15px;
+}
 
+.new_game {
+	width: 80px;
+	height: 22px;
+	font-size: 12px;
+	background-color: #e50000;
+	color: white;
+}
 
 /********
 FOOTER
-********/
+*******
