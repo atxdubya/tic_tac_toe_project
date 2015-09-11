@@ -3,7 +3,7 @@ GENERAL
 ********/
 
 body {
-	background-image: url(stadium.jpg);
+	background-image: url(arena.jpg);
 	background-size: cover;
 	padding-top: 42px;
 }
@@ -41,7 +41,9 @@ PAGE
 .player_1, .player_2, .results_1, .results_2 {
 	border: 2px solid white;
 	color: white;
-	background-color: black; /* #3B653D chalkboard green */
+	background-image: url(results.jpg);
+	background-size: cover;
+	background-repeat: no-repeat; /* #3B653D chalkboard green */
 }
 
 .results_1, .results_2 {
@@ -52,22 +54,28 @@ PAGE
 }
 
 .board {
-	border: 2px solid black;
 	width: 300px;
 	height: 300px;
-	background-color: white;
+	background-image: url(roman.jpg);
 	margin: 0 auto;
+	border-radius: 10%;
 }
 
 td {
-	border: 1px solid black;
 	text-align: center;
 }
 
 .square {
-	width: 100%;
-	height: 100%;
+	width: 95px;
+	height: 95px;
 	font-size: 48px;
+	border-radius: 100%;
+	background-image: url(trav.jpg);
+}
+
+.button_pic {
+	width: 70%;
+	height: 70%;
 }
 
 /*Get new_game button to be centered*/

@@ -24,19 +24,24 @@ $(".square").on("click", function() {
 	var buttonVal = $(this).attr('id');
 	var buttonStop = ("#" + buttonVal);
 
+	// Do not allow someone to change a square if it has already been clicked...CHECK
+	// if(win1 === true || win2 === true) {
+	// 	refreshBoard();
+	// }
+
 	if($(this).hasClass("deny")) {
 		return;
 	}
 
 	if(playerTurn === 1) {
-		$(this).text("X");
+		$(this).html('<img class="button_pic" src="trojan.png">');
 		$(this).addClass("deny");
 		buttonObj[buttonVal] = "X";
 		playerTurn = 2;
 	}
 
 	else if(playerTurn === 2) {
-		$(this).text("O");
+		$(this).html('<img class="button_pic" src="helmet.png">');
 		$(this).addClass("deny");
 		buttonObj[buttonVal] = "O";
 		playerTurn = 1;
@@ -52,11 +57,12 @@ $(".square").on("click", function() {
 		((buttonObj.b2 === "X") && (buttonObj.b5 === "X") && (buttonObj.b8 === "X")) ||
 		((buttonObj.b0 === "X") && (buttonObj.b4 === "X") && (buttonObj.b8 === "X")) ||
 		((buttonObj.b2 === "X") && (buttonObj.b4 === "X") && (buttonObj.b6 === "X"))) {
-		alert(player1 + " wins!!!");
-		$(".results_1").html("Win");
-		$(".results_2").html("Loss");
+			alert(player1 + " wins!!!");
+			// Mark the win in the corect player column (aka the chalkboard)...CHECK
+			$(".results_1").append("Win");
+			$(".results_2").append("Loss");
+			refreshBoard();
 		}
-
 
 	if (((buttonObj.b0 === "O") && (buttonObj.b1 === "O") && (buttonObj.b2 === "O")) ||
 		((buttonObj.b3 === "O") && (buttonObj.b4 === "O") && (buttonObj.b5 === "O")) ||
@@ -66,25 +72,33 @@ $(".square").on("click", function() {
 		((buttonObj.b2 === "O") && (buttonObj.b5 === "O") && (buttonObj.b8 === "O")) ||
 		((buttonObj.b0 === "O") && (buttonObj.b4 === "O") && (buttonObj.b8 === "O")) ||
 		((buttonObj.b2 === "O") && (buttonObj.b4 === "O") && (buttonObj.b6 === "O"))) {
-		alert(player2 + " wins!!!");
-		$(".results_2").html("Win");
-		$(".results_1").html("Loss");
+			alert(player2 + " wins!!!");
+			// Mark the win in the corect player column (aka the chalkboard)...CHECK
+			$(".results_2").append("Win");
+			$(".results_1").append("Loss");
+			refreshBoard();
 		}
 })
 
-//////// TO DO LIST ////////
-
-// Do not allow someone to change a square if it has already been clicked
-
-// Recognize a cat's game
-
-// Mark the win in the corect player column (aka the chalkboard)
-
-// Name which player won by name
-
+// Create function just to refresh the board
+function refreshBoard() {
+		$(".square").removeClass("deny");
+		$(".square").html("");
+		for (var i = 0; i <= 8; i++) {
+			buttonObj["b" + i] = "";
+			}
+		}
 
 // Click button for "New Game"...CHECK
 $(".new_game").on("click", function() {
 	if(confirm("Are you absolutely positvely with out a doubt sure you want to start a new game???"))
 		location.reload();
 })
+
+//////// TO DO LIST ////////
+
+// Recognize a cat's game
+
+
+
+
