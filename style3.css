@@ -6,6 +6,7 @@ body {
 	background-image: url(arena.jpg);
 	background-size: cover;
 	padding-top: 42px;
+	padding-bottom: 0;
 }
 
 /********
@@ -19,8 +20,30 @@ HEADER
 	text-align: center;
 }
 
-h1 {
+h1, a {
 	color: #888;
+	font-family: 'Kaushan Script' cursive;
+}
+
+.navbut, .navbut2, .navbut3 {
+	line-height: normal;
+	margin-top: 25px;
+	background-color: #888;
+}
+
+.navbut {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 14.5px;
+	padding: 0;
+}
+
+.navbut2 {
+	font-family: 'Graduate', cursive;
+}
+
+.navbut3 {
+	font-family: 'Cinzel Decorative', cursive;
+	font-size: 12px;
 }
 
 h2 {
@@ -46,12 +69,12 @@ PAGE
 	background-image: url(results.jpg);
 	background-size: cover;
 	background-repeat: no-repeat; /* #3B653D chalkboard green */
+	border-radius: 10%;
 	font-family: 'Cinzel Decorative', cursive;
 }
 
 .results_1, .results_2 {
-	height: 290px;
-	width: 242.5px;
+	height: 300px;
 	display: block;
 }
 
