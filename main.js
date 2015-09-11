@@ -34,14 +34,14 @@ $(".square").on("click", function() {
 	}
 
 	if(playerTurn === 1) {
-		$(this).html('<img class="button_pic" src="trojan.png">');
+		$(this).html('<img class="button_pic" src="black.png">');
 		$(this).addClass("deny");
 		buttonObj[buttonVal] = "X";
 		playerTurn = 2;
 	}
 
 	else if(playerTurn === 2) {
-		$(this).html('<img class="button_pic" src="helmet.png">');
+		$(this).html('<img class="button_pic" src="gold.png">');
 		$(this).addClass("deny");
 		buttonObj[buttonVal] = "O";
 		playerTurn = 1;
