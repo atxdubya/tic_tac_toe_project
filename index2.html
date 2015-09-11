@@ -1,23 +1,22 @@
-<!DOCTYPE html>
-
 <html>
 <head>
 	<title>Tic-Tac-Toe | Project</title>
 	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style2.css">
+	<link href='https://fonts.googleapis.com/css?family=Graduate|Caesar+Dressing|Cinzel+Decorative:400,700|Kaushan+Script|Bangers|Finger+Paint' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
 	<header>
-		<nav class="navbar-fixed-top">
-			<h1>NAVBAR</h1>
-			<a href="index.html">TicHome</a>
-			<a href="index2.html">TacDome</a>
-			<a href="index3.html">ToeArena</a>
+		<nav class="row navbar-fixed-top">
+			<h1 class="col-xs-3"><a href="index.html">Ticky-Tack</a></h1>
+			<button class="navbut col-xs-3" onclick="window.location.href='index.html'">Tic-Home</button>
+			<button class="navbut2 col-xs-3" onclick="window.location.href='index2.html'">Tac-Dome</button>
+			<button class="navbut3 col-xs-3" onclick="window.location.href='index3.html'">Toe-Arena</button>
 		</nav>
 		<h2>Tac Dome</h2>
 	</header>
-
 	<section class="container">
 		<div class="row text-center">
 			<h3 class="player_1 col-xs-3">player_1</h3>
@@ -25,45 +24,51 @@
 			<h3 class="player_2 col-xs-3">player_2</h3>
 		</div>
 		<div class="row text-center">
-			<textarea class="results_1 col-xs-3"></textarea>
+			<div class="results_1 col-xs-3">
+				<ul class="results_list_1">
+				</ul>
+			</div>
 			<div class="col-xs-6">
 				<table class="board">
 					<tr>
 						<td>
-							<button id="b0" class="square">0</button>
+							<button id="b0" class="square"></button>
 						</td>
 						<td>
-							<button id="b1" class="square">1</button>
+							<button id="b1" class="square"></button>
 						</td>
 						<td>
-							<button id="b2" class="square">2</button>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<button id="b3" class="square">3</button>
-						</td>
-						<td>
-							<button id="b4" class="square">4</button>
-						</td>
-						<td>
-							<button id="b5" class="square">5</button>
+							<button id="b2" class="square"></button>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<button id="b6" class="square">6</button>
+							<button id="b3" class="square"></button>
 						</td>
 						<td>
-							<button id="b7" class="square">7</button>
+							<button id="b4" class="square"></button>
 						</td>
 						<td>
-							<button id="b8" class="square">8</button>
+							<button id="b5" class="square"></button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button id="b6" class="square"></button>
+						</td>
+						<td>
+							<button id="b7" class="square"></button>
+						</td>
+						<td>
+							<button id="b8" class="square"></button>
 						</td>
 					</tr>
 				</table>
 			</div>
-			<textarea class="results_2 col-xs-3"></textarea>
+			<div class="results_2 col-xs-3">
+				<ul class="results_list_2">
+				</ul>
+			</div>
 		</div>
 		<div class="button-ctr">	
 			<button class="new_game">New Series</button>
@@ -74,6 +79,6 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="main2.js"></script>
 </body>
 </html>

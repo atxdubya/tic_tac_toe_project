@@ -6,6 +6,7 @@ body {
 	background-image: url(stadium.jpg);
 	background-size: cover;
 	padding-top: 42px;
+	padding-bottom: 0;
 }
 
 /********
@@ -19,8 +20,30 @@ HEADER
 	text-align: center;
 }
 
-h1 {
+h1, a {
 	color: #888;
+	font-family: 'Kaushan Script', cursive;
+}
+
+.navbut, .navbut2, .navbut3 {
+	line-height: normal;
+	margin-top: 25px;
+	background-color: #888;
+}
+
+.navbut {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 14.5px;
+	padding: 0;
+}
+
+.navbut2 {
+	font-family: 'Graduate', cursive;
+}
+
+.navbut3 {
+	font-family: 'Cinzel Decorative', cursive;
+	font-size: 12px;
 }
 
 h2 {
@@ -29,6 +52,8 @@ h2 {
 	padding-top: 100px;
 	margin-top: 0;
 	color: white;
+	font-family: 'Graduate', cursive;
+	font-size: 42px;
 }
 
 
@@ -41,26 +66,30 @@ PAGE
 .player_1, .player_2, .results_1, .results_2 {
 	border: 2px solid white;
 	color: white;
-	background-color: black; /* #3B653D chalkboard green */
+	background-color: black;
+	font-family: 'Graduate', cursive;
 }
 
 .results_1, .results_2 {
-	height: 290px;
-	max-height: 290px;
-	width: 242.5px;
-	max-width: 242.5px;
+	height: 300px;
+	display: block;
+}
+
+.results_list_1, .results_list_2 {
+	list-style: none;
+	padding-left: 0;
+	font-family: 'Graduate', cursive;
 }
 
 .board {
-	border: 2px solid black;
+	border: 2px solid white;
 	width: 300px;
 	height: 300px;
-	background-color: white;
 	margin: 0 auto;
 }
 
 td {
-	border: 1px solid black;
+	border: 5px solid white;
 	text-align: center;
 }
 
@@ -68,6 +97,15 @@ td {
 	width: 95px;
 	height: 95px;
 	font-size: 48px;
+	font-family: 'Finger Paint', cursive;
+	color: white;
+	background-color: #3B653D;
+}
+
+.button_pic {
+	width: 70%;
+	height: 70%;
+	color: white;
 }
 
 /*Get new_game button to be centered*/
