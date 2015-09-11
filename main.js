@@ -19,10 +19,12 @@ var buttonObj = {
 	// Switch between turns... CHECK
 	// Leave marker in the respective box...CHECK
 var playerTurn = 1;
+var catcCounter = 0;
 
 $(".square").on("click", function() {
 	var buttonVal = $(this).attr('id');
 	var buttonStop = ("#" + buttonVal);
+	catcCounter++
 
 	// Do not allow someone to change a square if it has already been clicked...CHECK
 	// if(win1 === true || win2 === true) {
@@ -34,14 +36,14 @@ $(".square").on("click", function() {
 	}
 
 	if(playerTurn === 1) {
-		$(this).html('<img class="button_pic" src="black.png">');
+		$(this).html('<img class="button_pic" src="dark.png">');
 		$(this).addClass("deny");
 		buttonObj[buttonVal] = "X";
 		playerTurn = 2;
 	}
 
 	else if(playerTurn === 2) {
-		$(this).html('<img class="button_pic" src="gold.png">');
+		$(this).html('<img class="button_pic" src="light.png">');
 		$(this).addClass("deny");
 		buttonObj[buttonVal] = "O";
 		playerTurn = 1;
@@ -59,8 +61,8 @@ $(".square").on("click", function() {
 		((buttonObj.b2 === "X") && (buttonObj.b4 === "X") && (buttonObj.b6 === "X"))) {
 			alert(player1 + " wins!!!");
 			// Mark the win in the corect player column (aka the chalkboard)...CHECK
-			$(".results_1").append("Win");
-			$(".results_2").append("Loss");
+			$(".results_list_1").append("<li>Win</li>");
+			$(".results_list_2").append("<li>Loss</li>");
 			refreshBoard();
 		}
 
@@ -74,10 +76,15 @@ $(".square").on("click", function() {
 		((buttonObj.b2 === "O") && (buttonObj.b4 === "O") && (buttonObj.b6 === "O"))) {
 			alert(player2 + " wins!!!");
 			// Mark the win in the corect player column (aka the chalkboard)...CHECK
-			$(".results_2").append("Win");
-			$(".results_1").append("Loss");
+			$(".results_list_2").append("<li>Win</li>");
+			$(".results_list_1").append("<li>Loss</li>");
 			refreshBoard();
 		}
+// Recognize a cat's game...CHECK
+	else if(catcCounter === 9) {
+		alert("CATS GAME");
+		refreshBoard();
+	}
 })
 
 // Create function just to refresh the board
@@ -95,9 +102,6 @@ $(".new_game").on("click", function() {
 		location.reload();
 })
 
-//////// TO DO LIST ////////
-
-// Recognize a cat's game
 
 
 

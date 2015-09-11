@@ -26,11 +26,11 @@ h1 {
 h2 {
 	text-align: center;
 	text-decoration: underline;
-	padding-top: 50px;
+	padding-top: 68px;
 	margin-top: 0;
 	color: #a47a3f;
-	font-family: 'Times New Roman';
-	font-size: 50px;
+	font-family: 'Cinzel Decorative', cursive;
+	font-size: 36px;
 }
 
 
@@ -46,13 +46,19 @@ PAGE
 	background-image: url(results.jpg);
 	background-size: cover;
 	background-repeat: no-repeat; /* #3B653D chalkboard green */
+	font-family: 'Cinzel Decorative', cursive;
 }
 
 .results_1, .results_2 {
 	height: 290px;
-	max-height: 290px;
 	width: 242.5px;
-	max-width: 242.5px;
+	display: block;
+}
+
+.results_list_1, .results_list_2 {
+	list-style: none;
+	padding-left: 0;
+	font-family: 'Cinzel Decorative', cursive;
 }
 
 .board {
