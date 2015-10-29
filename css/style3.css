@@ -3,9 +3,9 @@ GENERAL
 ********/
 
 body {
-	background-image: url(stadium.jpg);
+	background-image: url('../images/arena.jpg');
 	background-size: cover;
-	padding-top: 70px;
+	padding-top: 60px;
 	padding-bottom: 0;
 }
 
@@ -22,7 +22,7 @@ HEADER
 
 h1, a {
 	color: #888;
-	font-family: 'Kaushan Script', cursive;
+	font-family: 'Kaushan Script' cursive;
 }
 
 .navbut, .navbut2, .navbut3 {
@@ -49,10 +49,10 @@ h1, a {
 h2 {
 	text-align: center;
 	text-decoration: underline;
-	padding-top: 100px;
+	padding-top: 68px;
 	margin-top: 0;
-	color: white;
-	font-family: 'Graduate', cursive;
+	color: #a47a3f;
+	font-family: 'Cinzel Decorative', cursive;
 	font-size: 42px;
 }
 
@@ -66,8 +66,11 @@ PAGE
 .player_1, .player_2, .results_1, .results_2 {
 	border: 2px solid white;
 	color: white;
-	background-color: black;
-	font-family: 'Graduate', cursive;
+	background-image: url('../images/results.jpg');
+	background-size: cover;
+	background-repeat: no-repeat; /* #3B653D chalkboard green */
+	border-radius: 10%;
+	font-family: 'Cinzel Decorative', cursive;
 }
 
 .results_1, .results_2 {
@@ -78,18 +81,18 @@ PAGE
 .results_list_1, .results_list_2 {
 	list-style: none;
 	padding-left: 0;
-	font-family: 'Graduate', cursive;
+	font-family: 'Cinzel Decorative', cursive;
 }
 
 .board {
-	border: 2px solid white;
 	width: 300px;
 	height: 300px;
+	background-image: url('../images/roman.jpg');
 	margin: 0 auto;
+	border-radius: 10%;
 }
 
 td {
-	border: 5px solid white;
 	text-align: center;
 }
 
@@ -97,15 +100,13 @@ td {
 	width: 95px;
 	height: 95px;
 	font-size: 48px;
-	font-family: 'Finger Paint', cursive;
-	color: white;
-	background-color: #3B653D;
+	border-radius: 100%;
+	background-image: url('../images/trav.jpg');
 }
 
 .button_pic {
 	width: 70%;
 	height: 70%;
-	color: white;
 }
 
 /*Get new_game button to be centered*/
@@ -118,8 +119,8 @@ td {
 	width: 80px;
 	height: 22px;
 	font-size: 12px;
-	background-color: #e50000;
-	color: white;
+	background-color: #341f0a;
+	color: #c6a969;
 }
 
 /********
